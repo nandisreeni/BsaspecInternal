@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" ClientIDMode="Static" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<script type="text/javascript">
+    function test() {
+        var x = window.event.srcElement.value.replace(/\D/g, '').match(/(\d{3})(\d{3})(\d{4})/);
+        window.event.srcElement.value = x[1] + '-' + x[2] + '-' + x[3];
+    }
+</script>
+<meta charset="utf-8">
+
+<script src="Scripts/jquery-3.0.0.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/popper.min.js"></script>
+<script src="Scripts/jquery-ui-1.12.1.min.js"></script>
+<script src="Scripts/jquery.timepicker.min.js"></script>
+
+<link href="Content/jquery-ui.structure.css" rel="stylesheet" />
+<link href="Content/bootstrap.min.css" rel="stylesheet">
+<link href="Content/style.css" rel="stylesheet" />
+<link href="Content/jquery.timepicker.min.css" rel="stylesheet" />
+
+
+
+<html>
+<head runat="server">
+
+    <title>BSASPEC Internal Website</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body class="homepage">
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <div class="collapse navbar-collapse" >
+    <a class="navbar-brand" href="index.html">
+                        <img src="images/logoresize.png" alt="logo" ></a>
+    <ul class="navbar-nav ">
+     
+      <li  class="nav-item" ><a style="font-family: 'Book Antiqua'; font-size: medium; font-weight: bolder; color: #06AAB8; text-transform: capitalize;" href="Welcomepage.aspx">Home</a></li>
+    
+    </ul>
+   <span class="navbar-nav ml-auto " >
+      <b style="font-family: 'Book Antiqua'; font-size: medium; font-weight: bold; color: #06AAB8;">&nbsp;<%#"Signed in as " + FirstName %>&nbsp;<%#LastName %></b>
+    </span>
+  </div>
+</nav>
+     
+    </header>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+  
+</body>
+</html>

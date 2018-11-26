@@ -67,13 +67,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sample.aspx.cs">
+      <DependentUpon>sample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sheduleskype.aspx.cs">
+      <DependentUpon>sheduleskype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Studentleads.aspx.cs">
+      <DependentUpon>Studentleads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_Code\GenericFunctions.cs" />
+    <Compile Include="Archive\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comments.aspx.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="App_Data\dbbsaspec.mdf" />
+    <Content Include="App_Data\dbbsaspec_log.ldf">
+      <DependentUpon>dbbsaspec.mdf</DependentUpon>
+    </Content>
+    <Content Include="Archive\Default.aspx" />
+    <Content Include="Comments.aspx" />
+    <Content Include="EmailTemplate.html" />
+    <Content Include="login.aspx" />
+    <Content Include="registration.aspx" />
+    <Content Include="sample.aspx" />
+    <Content Include="sheduleskype.aspx" />
+    <Content Include="signin.jpg" />
+    <Content Include="Studentleads.aspx" />
+    <Content Include="Users.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterPage.master" />
     <None Include="packages.config" />
+    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
